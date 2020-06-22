@@ -41,6 +41,18 @@ _C.MODEL.PIXEL_MEAN = [103.530, 116.280, 123.675]
 # Otherwise, you can use [57.375, 57.120, 58.395] (ImageNet std)
 _C.MODEL.PIXEL_STD = [1.0, 1.0, 1.0]
 
+# Apply deep stem 
+_C.MODEL.RESNETS.DEEP_STEM = False
+# Apply avg after conv2 in the BottleBlock
+# When AVD=True, the STRIDE_IN_1X1 should be False
+_C.MODEL.RESNETS.AVD = False
+# Apply avg_down to the downsampling layer for residual path 
+_C.MODEL.RESNETS.AVG_DOWN = False
+
+# Radix in ResNeSt
+_C.MODEL.RESNETS.RADIX = 1
+# Bottleneck_width in ResNeSt
+_C.MODEL.RESNETS.BOTTLENECK_WIDTH = 64
 
 # -----------------------------------------------------------------------------
 # INPUT
